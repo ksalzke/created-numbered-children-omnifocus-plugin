@@ -1,0 +1,38 @@
+/*{
+	"type": "action",
+	"targets": ["omnifocus"],
+	"author": "Kaitlin Salzke",
+	"identifier": "com.KaitlinSalzke.createdNumberedChildren",
+	"version": "1.0",
+	"description": "Add numbered tasks as children of selected",
+	"label": "Create Numbered Children",
+	"shortLabel": "Create Numbered Children"
+}*/
+(() => {
+  var action = new PlugIn.Action(function (selection, sender) {
+    var inputForm = new Form();
+
+    textField = new Form.Field.String("textInput", "Number to Create", null);
+    inputForm.addField(textField);
+
+    formPrompt = "How many to add?";
+    formPromise = inputForm.show(formPrompt, "Continue");
+
+    formPromise.then(function (formObject) {
+      maxNumber = parseInt(formObject.values["textInput"]);
+
+      selection.tasks.forEach(function (task) {
+        for (let i = 1; i <= maxNumber; i++) {
+          console.log(toString(i));
+          new Task(String(i), task);
+        }
+      });
+    });
+  });
+
+  action.validate = function (selection, sender) {
+    return selection.tasks.length > 0;
+  };
+
+  return action;
+})();
