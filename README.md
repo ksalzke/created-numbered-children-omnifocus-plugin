@@ -6,13 +6,13 @@ _Please note that all scripts on my GitHub account (or shared elsewhere) are wor
 
 ## Known issues
 
-None so far! 🤞
+Refer to ['issues'](https://github.com/ksalzke/created-numbered-children-omnifocus-plugin/issues) for known issues and planned changes/enhancements.
 
 # Installation & Set-Up
 
-1. Click on the green `Clone or download` button above to download a `.zip` file of the file in this GitHub repository.
+1. Download the [latest release](https://github.com/ksalzke/created-numbered-children-omnifocus-plugin/releases/latest).
 2. Unzip the downloaded file.
-3. Move the `.omnijs` file to your OmniFocus plug-in library folder.
+3. Move the `.omnifocusjs` file to your OmniFocus plug-in library folder (or open it to install).
 
 # Actions
 
