@@ -4,10 +4,11 @@
 "targets": ["omnifocus"],
 "author": "Kaitlin Salzke",
 "identifier": "com.KaitlinSalzke.createdNumberedChildren",
-"version": "1.0",
+"version": "1.1.0",
 "description": "Add numbered tasks as children of selected",
 "label": "Create Numbered Children",
-"shortLabel": "Create Numbered Children"
+"shortLabel": "Create Numbered Children",
+"image": "list.number"
 }*/
 (() => {
   const action = new PlugIn.Action(function (selection, sender) {
